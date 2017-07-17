@@ -30,4 +30,13 @@ public class ExcursionsDaoImpl extends BaseDaoImpl<Excursions, Long> implements 
         }
         return list;
     }
+
+    public List<Excursions> getExcursionsByStartEnd(String start, String end) {
+        return entityManager.createNamedQuery("Task07")
+                .setParameter(1,start)
+                .setParameter(2,end)
+                .getResultList();
+    }
+
+
 }

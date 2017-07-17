@@ -16,5 +16,8 @@ public interface ExcursionsService {
     Excursions getExcursionById(Long id);
     void delete(Excursions entity);
 
+
     List<ExcursionsDTO> getAllExcursionsWithGuides();
+
+    List<Excursions> getExcursionsByStartEnd(String start,String end);
 }

@@ -6,6 +6,7 @@ import com.softserve.services.ExcursionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -71,5 +72,15 @@ public class TasksController {
         model.addAttribute("listExc", employeesService.everything());
         return "task5";
     }
+
+
+    @RequestMapping(value = "/task7" ,method = RequestMethod.POST)
+    public  String nothing(Model model, @PathVariable("startdate") String start,@PathVariable("enddate") String end) {
+        model.addAttribute("listArt", excursionsService.getExcursionsByStartEnd(start,end));
+        return "task7";
+    }
+
+    
+
 
 }
