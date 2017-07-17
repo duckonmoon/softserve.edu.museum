@@ -24,7 +24,7 @@
                     <span class="glyphicon glyphicon-user"></span>Employees</a>
                 </li>
 
-                <li><a href="">
+                <li><a href="/excursions">
                     <span class="glyphicon glyphicon-list-alt"></span>Excursions</a>
                 </li>
             </ul>

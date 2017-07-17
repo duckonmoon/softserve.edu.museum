@@ -1,7 +1,7 @@
 package dto;
 
 /**
- * Created by User on 17.07.2017.
+ *
  */
 public class ExcursionsDTO {
 

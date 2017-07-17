@@ -4,6 +4,8 @@ import com.softserve.entity.Excursions;
 import dto.ExcursionsDTO;
 import org.springframework.stereotype.Repository;
 
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -13,7 +15,19 @@ import java.util.List;
 public class ExcursionsDaoImpl extends BaseDaoImpl<Excursions, Long> implements ExcursionsDao {
 
     public List<ExcursionsDTO> getAllExcursionsWithGuides() {
-        return entityManager.createQuery("select g.lastname,g.firstname,e.start,e.end from Excursions e join" +
-                " e.guide g where g.excursions=:guide ").getResultList();
+        List<Object[]> resultList = entityManager.createQuery("select e.start,e.end,g.firstname,g.lastname from Excursions e join e.guide g").getResultList();
+        Iterator<Object []> listIterator = resultList.iterator();
+        List<ExcursionsDTO> list = new LinkedList<ExcursionsDTO>();
+        while (listIterator.hasNext())
+        {
+            ExcursionsDTO ed = new ExcursionsDTO();
+            Object[] fuck = listIterator.next();
+            ed.setStart(fuck[0].toString());
+            ed.setEnd(fuck[1].toString());
+            ed.setFirstname(fuck[2].toString());
+            ed.setLastname(fuck[3].toString());
+            list.add(ed);
+        }
+        return list;
     }
 }

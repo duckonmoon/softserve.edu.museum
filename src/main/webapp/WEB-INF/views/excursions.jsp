@@ -43,20 +43,26 @@
                         Lastname
                     </th>
                     <th>
-                        Position
+                        Start date
+                    </th>
+                    <th>
+                        End date
                     </th>
                 </tr></thead>
                 <tbody>
-                <c:forEach items="${list}" var="employee" >
+                <c:forEach items="${exclist}" var="excursions" >
                     <tr>
                         <td>
-                                ${employee.firstname}
+                                ${excursions.firstname}
                         </td>
                         <td>
-                                ${employee.lastname}
+                                ${excursions.lastname}
                         </td>
                         <td>
-                                ${employee.position}
+                                ${excursions.start}
+                        </td>
+                        <td>
+                                ${excursions.end}
                         </td>
                     </tr>
                 </c:forEach>

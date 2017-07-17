@@ -25,8 +25,7 @@ public class ExcursionsController {
 
     @RequestMapping(value="/excursions", method = RequestMethod.GET)
     public String excursionList(Model model){
-        model.addAttribute("list", excursionsService.getAllExcursions());
-//        model.addAttribute("listEmployees", employeesService.getEmployeeById(1))
+        model.addAttribute("exclist", excursionsService.getAllExcursionsWithGuides());
         return "excursions";
     }
 }

@@ -23,7 +23,7 @@
                     <span class="glyphicon glyphicon-user"></span>Employees</a>
                 </li>
 
-                <li><a href="">
+                <li><a href="/excursions">
                     <span class="glyphicon glyphicon-list-alt"></span>Excursions</a>
                 </li>
             </ul>
@@ -70,7 +70,7 @@
                             ${artpiece.technique}
                     </td>
                     <td>
-                        
+
                     </td>
                 </tr>
                 </c:forEach>
