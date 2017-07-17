@@ -35,6 +35,12 @@
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <table class="table">
+                <colgroup>
+                    <col style="width: 25%" />
+                    <col style="width: 25%" />
+                    <col style="width: 25%" />
+                    <col style="width: 25%" />
+                </colgroup>
                 <thead>
                 <tr><th>
                     Firstname

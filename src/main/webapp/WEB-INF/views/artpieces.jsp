@@ -35,14 +35,21 @@
         <div class="widget-content padded clearfix">
             <table class="table">
                 <thead>
-                    <tr>
-                        <th>
+                <colgroup>
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                    <col style="width: 20%" />
+                </colgroup>
+                    <tr >
+                        <th >
                             Artpiece Name
                         </th>
-                        <th>
+                        <th >
                             Author
                         </th>
-                        <th>
+                        <th >
                             Hall
                         </th>
                         <th >
