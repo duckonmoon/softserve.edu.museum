@@ -6,8 +6,21 @@ import java.util.Set;
 
 /**
  *
+ *   private static final String MATERIAL_STATISTIC = "SELECT material, COUNT(*) AS quantity, ROUND((count(material) * 100) / " +
+ "(SELECT COUNT(*) FROM artpieces)) AS percentage\n" +
+ "FROM artpieces\n" +
+ "GROUP BY material\n" +
+ "HAVING material = ?;";
  */
 @Entity
+@NamedQueries( {@NamedQuery(name = "Task1", query = "from Artpieces where name = ?"),
+        @NamedQuery(name = "Task2", query = "from Artpieces where author = ?"),
+        @NamedQuery(name = "Task3", query = "select a.name,e.firstname from Artpieces a join a.employees e"),
+        @NamedQuery(name = "Task4", query = "from Artpieces a where hall = ?"),
+        @NamedQuery(name = "Task8.1", query = "select a.material, count(*) as quantity, count(a.material) * 100 / ?" +
+                " from Artpieces a group by a.material having a.material = ?"),
+        @NamedQuery(name = "Task8.11" , query = "select count(*) from Artpieces")
+        })
 public class Artpieces {
 
     private String name;

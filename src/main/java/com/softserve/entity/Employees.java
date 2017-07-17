@@ -9,6 +9,9 @@ import java.util.Set;
  * Created by shmidt on 16.07.17.
  */
 @Entity
+@NamedQueries(
+        @NamedQuery(name = "Task05", query = "from Employees where position = 'guide'")
+)
 public class Employees {
 
     @Id

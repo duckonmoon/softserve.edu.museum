@@ -8,6 +8,10 @@ import java.util.Set;
  * Created by shmidt on 16.07.17.
  */
 @Entity
+@NamedQueries({@NamedQuery(name = "Task07", query = "from Excursions as e where e.start>=? and e.end<=?"),
+        @NamedQuery(name = "Task09" , query = "select count (*)from Excursions exc where exc.start >= ? AND exc.end <= ?")
+
+})
 public class Excursions {
 
     @Id
