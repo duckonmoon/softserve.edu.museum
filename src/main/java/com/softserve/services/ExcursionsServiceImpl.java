@@ -40,4 +40,8 @@ public class ExcursionsServiceImpl implements ExcursionsService {
     public List<ExcursionsDTO> getAllExcursionsWithGuides() {
         return excursionsDao.getAllExcursionsWithGuides();
     }
+
+    public List<Excursions> getExcursionsByStartEnd(String start, String end) {
+        return excursionsDao.getExcursionsByStartEnd(start,end);
+    }
 }
