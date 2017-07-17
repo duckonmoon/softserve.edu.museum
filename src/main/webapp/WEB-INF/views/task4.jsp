@@ -35,6 +35,28 @@
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <%--Artpieces in the hall--%>
+                <table class="table">
+                    <thead>
+                    <tr><th>
+                        Artpiece Name
+                    </th>
+                        <th>
+                            Employee Name
+                        </th>
+                    </tr></thead>
+                    <tbody>
+                    <c:forEach items="${listArt}" var="art_emp" >
+                        <tr>
+                            <td>
+                                    ${art_emp.name}
+                            </td>
+                            <td>
+                                    ${art_emp.firstname}
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
 
         </div>
     </div>

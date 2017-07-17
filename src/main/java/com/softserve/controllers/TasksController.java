@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Created by User on 17.07.2017.
+ *
  */
 @Controller
 public class TasksController {
@@ -25,18 +25,27 @@ public class TasksController {
     private ArtpiecesService artpiecesService;
 
 
+    /**
+     * Task 1
+     */
     @RequestMapping(value = "/task1" ,method = RequestMethod.POST)
     public  String employeeList(Model model, @RequestParam("artpiece") String artpiece) {
         model.addAttribute("artpieceObject", artpiecesService.getArtpieceByName(artpiece));
         return "task1";
     }
 
+    /**
+     * Task 2
+     */
     @RequestMapping(value = "/task2" ,method = RequestMethod.POST)
     public  String authorList(Model model, @RequestParam("author") String author) {
         model.addAttribute("listArt", artpiecesService.getArtpieceByAuthors(author));
         return "task2";
     }
 
+    /**
+     * Task 3
+     */
     @RequestMapping(value = "/task3" ,method = RequestMethod.POST)
     public  String nameList(Model model,@RequestParam("name") String name) {
         model.addAttribute("listArt", artpiecesService.getEmployArt(name));
@@ -44,6 +53,9 @@ public class TasksController {
         return "task3";
     }
 
+    /**
+     * Task 4
+     */
     @RequestMapping(value = "/task4" ,method = RequestMethod.POST)
     public  String ListByHall(Model model,@RequestParam("hall") Long hall) {
         model.addAttribute("listArt", artpiecesService.getArtpieceByHall(hall));
