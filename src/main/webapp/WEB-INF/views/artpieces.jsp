@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Artpieces</title>
     <link href="/resources/css/bootstrap.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="/resources/css/bootstrap-theme.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="/resources/css/style.css" media="all" rel="stylesheet" type="text/css"/>
@@ -16,10 +16,10 @@
                     <a href="/">
                         <span class="glyphicon glyphicon-home"></span>Home</a>
                 </li>
-                <li><a href="">
+                <li><a href="/artpieces">
                     <span class="glyphicon glyphicon-king"></span>Artpieces</a>
                 </li>
-                <li><a href="">
+                <li><a href="/employees">
                     <span class="glyphicon glyphicon-user"></span>Employees</a>
                 </li>
 

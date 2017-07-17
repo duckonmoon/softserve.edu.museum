@@ -3,22 +3,22 @@ package com.softserve.controllers;
 import com.softserve.services.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  *
  */
 @Controller
-@RequestMapping("/employees")
 public class EmployeesController {
 
     @Autowired
     private EmployeesService employeesService;
 
-    public @ResponseBody String getAllEmployees(){
-        return employeesService.getAllEmployees().toString();
+    @RequestMapping(value = "/employees" ,method = RequestMethod.GET)
+    public  String checkBook(Model model) {
+        model.addAttribute("list", employeesService.getAllEmployees());
+        return "employees";
     }
-
-
 }
