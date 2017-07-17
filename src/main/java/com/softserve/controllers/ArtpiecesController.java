@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -20,7 +19,7 @@ public class ArtpiecesController {
     @RequestMapping(value = "/artpieces" ,method = RequestMethod.GET)
     public  String checkBook(Model model) {
         model.addAttribute("list", artpiecesService.getAllArtpieces());
-        return "allArtpieces";
+        return "artpieces";
     }
 
 
