@@ -40,5 +40,9 @@ public class ArtpiecesServiceImpl implements ArtpiecesService {
         return artpiecesDao.getArtpieceByName(ap);
     }
 
+    public List<Artpieces> getArtpieceByAuthors(String author) {
+        return artpiecesDao.getArtpieceByAuthors(author);
+    }
+
 
 }

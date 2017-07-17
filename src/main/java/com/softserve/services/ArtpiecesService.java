@@ -16,4 +16,6 @@ public interface ArtpiecesService {
 
     Artpieces getArtpieceByName(String id);
 
+    List<Artpieces> getArtpieceByAuthors(String author);
+
 }

@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface ArtpiecesDao extends BaseDao<Artpieces, Long> {
     Artpieces getArtpieceByName(String artpiece);
+    List<Artpieces> getArtpieceByAuthors(String author);
+
 }
