@@ -14,4 +14,6 @@ public interface ArtpiecesService {
     List<Artpieces> getAllArtpieces();
     void delete(Artpieces entity);
 
+    Artpieces getArtpieceByName(String id);
+
 }

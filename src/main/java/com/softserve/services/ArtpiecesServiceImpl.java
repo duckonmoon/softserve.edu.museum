@@ -36,5 +36,9 @@ public class ArtpiecesServiceImpl implements ArtpiecesService {
         artpiecesDao.delete(entity);
     }
 
+    public Artpieces getArtpieceByName(String ap) {
+        return artpiecesDao.getArtpieceByName(ap);
+    }
+
 
 }
