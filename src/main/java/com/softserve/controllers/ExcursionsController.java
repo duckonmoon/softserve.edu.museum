@@ -19,10 +19,6 @@ public class ExcursionsController {
     @Autowired
     private ExcursionsService excursionsService;
 
-    @Autowired
-    private EmployeesService employeesService;
-
-
     @RequestMapping(value="/excursions", method = RequestMethod.GET)
     public String excursionList(Model model){
         model.addAttribute("exclist", excursionsService.getAllExcursionsWithGuides());
