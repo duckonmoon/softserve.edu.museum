@@ -17,7 +17,7 @@ public class EmployeesController {
     private EmployeesService employeesService;
 
     @RequestMapping(value = "/employees" ,method = RequestMethod.GET)
-    public  String checkBook(Model model) {
+    public  String employeeList(Model model) {
         model.addAttribute("list", employeesService.getAllEmployees());
         return "employees";
     }
