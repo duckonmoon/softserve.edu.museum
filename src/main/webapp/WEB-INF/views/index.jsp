@@ -67,10 +67,10 @@
                         <h3 class="panel-title">Task 3</h3>
                     </div>
                     <div class="panel-body">
-                        <span class="pull-left">Show all employees by an artpiece</span>
-                        <form class="navbar-form navbar-right">
+                        <span class="pull-left">Show artpieces by employee</span>
+                        <form class="navbar-form navbar-right" action="/task3" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Artpiece">
+                                <input name="name" type="text" class="form-control" placeholder="Employee">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>
