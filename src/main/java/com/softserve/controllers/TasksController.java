@@ -27,7 +27,7 @@ public class TasksController {
 
     @RequestMapping(value = "/task1" ,method = RequestMethod.POST)
     public  String employeeList(Model model, @RequestParam("artpiece") String artpiece) {
-        model.addAttribute(artpiecesService.getArtpieceByName(artpiece));
+        model.addAttribute("artpieceObject", artpiecesService.getArtpieceByName(artpiece));
         return "task1";
     }
 }

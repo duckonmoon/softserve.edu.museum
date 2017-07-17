@@ -40,7 +40,7 @@
                     </div>
                     <div class="panel-body">
                         <span class="pull-left">Show info about the artpiece</span>
-                        <form class="navbar-form navbar-right">
+                        <form class="navbar-form navbar-right" action="/task1" method="post">
                             <div class="form-group">
                                 <input name="artpiece" type="text" class="form-control" placeholder="Artpiece">
                             </div>

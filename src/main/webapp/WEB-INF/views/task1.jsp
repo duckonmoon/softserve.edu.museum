@@ -35,6 +35,12 @@
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
            <%--Artpiece information--%>
+            <h3>Artpiece Info</h3><br>
+            <b>Name:</b> ${artpieceObject.name} <br>
+               <b>Author:</b> ${artpieceObject.author}<br>
+                   <b>Hall:</b> ${artpieceObject.hall}<br>
+                       <b>Material:</b> ${artpieceObject.material}<br>
+                           <b>Technique:</b> ${artpieceObject.technique}<br>
 
         </div>
     </div>
