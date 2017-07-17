@@ -31,16 +31,27 @@
         </div>
     </div>
 </div>
-<div class="container-fluid main-content" style="width: 60%">
+<div class="container-fluid main-content" style="width: 30%">
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
-           <%--Artpiece information--%>
-            <h3>Artpiece Info</h3><br>
-            <b>Name:</b> ${artpieceObject.name} <br>
-               <b>Author:</b> ${artpieceObject.author}<br>
-                   <b>Hall:</b> ${artpieceObject.hall}<br>
-                       <b>Material:</b> ${artpieceObject.material}<br>
-                           <b>Technique:</b> ${artpieceObject.technique}<br>
+            <h3 align="center">"${artpieceObject.name}"</h3>
+            <ul style="list-style-type: none;" class="center-block">
+                <li>
+                    <b>Name:</b> ${artpieceObject.name}
+                </li>
+                <li>
+                    <b>Author:</b> ${artpieceObject.author}
+                </li>
+                <li>
+                    <b>Hall:</b> ${artpieceObject.hall}
+                </li>
+                <li>
+                    <b>Material:</b> ${artpieceObject.material}
+                </li>
+                <li>
+                    <b>Technique:</b> ${artpieceObject.technique}
+                </li>
+            </ul>
 
         </div>
     </div>

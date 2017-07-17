@@ -33,7 +33,7 @@ public class TasksController {
 
     @RequestMapping(value = "/task2" ,method = RequestMethod.POST)
     public  String authorList(Model model, @RequestParam("author") String author) {
-        model.addAttribute("listArt", artpiecesService.getArtpieceByName(author));
+        model.addAttribute("listArt", artpiecesService.getArtpieceByAuthors(author));
         return "task2";
     }
 

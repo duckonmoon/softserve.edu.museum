@@ -35,7 +35,49 @@
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <%--Artpieces of an author --%>
+                <table class="table">
+                    <thead>
+                    <tr><th>
+                        Artpiece Name
+                    </th>
+                        <th>
+                            Author
+                        </th>
+                        <th>
+                            Hall
+                        </th>
+                        <th >
+                            Material
+                        </th>
+                        <th >
+                            Technique
+                        </th>
+                    </tr></thead>
+                    <tbody>
+                <c:forEach items="${listArt}" var="artpiece" >
+                    <tr>
+                        <td>
+                                ${artpiece.name}
+                        </td>
+                        <td>
+                                ${artpiece.author}
+                        </td>
+                        <td>
+                                ${artpiece.hall}
+                        </td>
+                        <td>
+                                ${artpiece.material}
+                        </td>
+                        <td>
+                                ${artpiece.technique}
+                        </td>
+                        <td>
 
+                        </td>
+                    </tr>
+                </c:forEach>
+                    </tbody>
+                </table>
         </div>
     </div>
 </div>

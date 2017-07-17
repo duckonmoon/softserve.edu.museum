@@ -54,9 +54,9 @@
                     </div>
                     <div class="panel-body">
                         <span class="pull-left">Show all artpieces of an author</span>
-                        <form class="navbar-form navbar-right">
+                        <form class="navbar-form navbar-right" action="/task2" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Author">
+                                <input name="author" type="text" class="form-control" placeholder="Author">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>
