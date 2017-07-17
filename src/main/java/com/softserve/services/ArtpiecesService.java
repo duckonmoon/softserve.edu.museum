@@ -21,4 +21,7 @@ public interface ArtpiecesService {
 
 
     List<Task03DTO> getEmployArt();
+
+    List<Artpieces> getArtpieceByHall(Long id);
+
 }

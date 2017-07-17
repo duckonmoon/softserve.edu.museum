@@ -45,5 +45,11 @@ public class ArtpiecesDaoImpl extends BaseDaoImpl<Artpieces, Long> implements Ar
         return list;
     }
 
+    public List<Artpieces> getArtpieceByHall(Long id) {
+        Query query = entityManager.createNamedQuery("Task4");
+        query.setParameter(1,id);
+        return query.getResultList();
+    }
+
 
 }

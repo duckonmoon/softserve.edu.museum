@@ -12,4 +12,5 @@ public interface ArtpiecesDao extends BaseDao<Artpieces, Long> {
     Artpieces getArtpieceByName(String artpiece);
     List<Artpieces> getArtpieceByAuthors(String author);
     List<Task03DTO> getEmployArt();
+    List<Artpieces> getArtpieceByHall(Long id);
 }

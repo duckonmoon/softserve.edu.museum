@@ -42,4 +42,11 @@ public class TasksController {
         model.addAttribute("listArt", artpiecesService.getEmployArt());
         return "task3";
     }
+
+    @RequestMapping(value = "/task4" ,method = RequestMethod.POST)
+    public  String ListByHall(Model model,@RequestParam("hall") Long hall) {
+        model.addAttribute("listArt", artpiecesService.getArtpieceByHall(hall));
+        return "task4";
+    }
+
 }

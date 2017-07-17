@@ -50,5 +50,9 @@ public class ArtpiecesServiceImpl implements ArtpiecesService {
         return artpiecesDao.getEmployArt();
     }
 
+    public List<Artpieces> getArtpieceByHall(Long id) {
+        return artpiecesDao.getArtpieceByHall(id);
+    }
+
 
 }
