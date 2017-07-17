@@ -37,9 +37,9 @@ public class TasksController {
         return "task2";
     }
 
-    @RequestMapping(value = "/task3" ,method = RequestMethod.GET)
-    public  String authorList(Model model) {
-        model.addAttribute("listArt", artpiecesService.getEmployArt());
+    @RequestMapping(value = "/task3" ,method = RequestMethod.POST)
+    public  String nameList(Model model,@RequestParam("name") String name) {
+        model.addAttribute("listArt", artpiecesService.getEmployArt(name));
         return "task3";
     }
 

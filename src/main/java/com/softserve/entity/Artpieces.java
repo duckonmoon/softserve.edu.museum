@@ -15,7 +15,7 @@ import java.util.Set;
 @Entity
 @NamedQueries( {@NamedQuery(name = "Task1", query = "from Artpieces where name = ?1"),
         @NamedQuery(name = "Task2", query = "from Artpieces where author = ?1"),
-        @NamedQuery(name = "Task3", query = "select a.name,e.firstname from Artpieces a join a.employees e"),
+        @NamedQuery(name = "Task3", query = "select a.name,e.firstname from Artpieces a join a.employees e where  e.firstname = ?1"),
         @NamedQuery(name = "Task4", query = "from Artpieces a where hall = ?1"),
         @NamedQuery(name = "Task8.1", query = "select a.material, count(*) as quantity, count(a.material) * 100 / ?1" +
                 " from Artpieces a group by a.material having a.material = ?2"),

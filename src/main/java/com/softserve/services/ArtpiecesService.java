@@ -20,7 +20,7 @@ public interface ArtpiecesService {
     List<Artpieces> getArtpieceByAuthors(String author);
 
 
-    List<Task03DTO> getEmployArt();
+    List<Task03DTO> getEmployArt(String name);
 
     List<Artpieces> getArtpieceByHall(Long id);
 

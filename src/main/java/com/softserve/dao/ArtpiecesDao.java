@@ -11,6 +11,6 @@ import java.util.List;
 public interface ArtpiecesDao extends BaseDao<Artpieces, Long> {
     Artpieces getArtpieceByName(String artpiece);
     List<Artpieces> getArtpieceByAuthors(String author);
-    List<Task03DTO> getEmployArt();
+    List<Task03DTO> getEmployArt(String name);
     List<Artpieces> getArtpieceByHall(Long id);
 }

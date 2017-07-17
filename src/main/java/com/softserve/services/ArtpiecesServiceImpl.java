@@ -45,10 +45,10 @@ public class ArtpiecesServiceImpl implements ArtpiecesService {
         return artpiecesDao.getArtpieceByAuthors(author);
     }
 
-    public List<Task03DTO> getEmployArt()
-    {
-        return artpiecesDao.getEmployArt();
+    public List<Task03DTO> getEmployArt(String name) {
+        return  artpiecesDao.getEmployArt(name);
     }
+
 
     public List<Artpieces> getArtpieceByHall(Long id) {
         return artpiecesDao.getArtpieceByHall(id);

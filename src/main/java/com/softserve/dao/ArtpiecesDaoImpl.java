@@ -30,8 +30,9 @@ public class ArtpiecesDaoImpl extends BaseDaoImpl<Artpieces, Long> implements Ar
         return query.getResultList();
     }
 
-    public List<Task03DTO> getEmployArt() {
-        List<Object[]> resultList = entityManager.createNamedQuery("Task3").getResultList();
+    public List<Task03DTO> getEmployArt(String name) {
+        Query query = entityManager.createNamedQuery("Task3");
+        List<Object[]> resultList = query.setParameter(1,name).getResultList();
         Iterator<Object []> listIterator = resultList.iterator();
         List<Task03DTO> list = new LinkedList<Task03DTO>();
         while (listIterator.hasNext())
