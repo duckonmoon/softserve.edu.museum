@@ -2,7 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Artpieces</title>
+    <meta charset="UTF-8">
+    <title>Excursions</title>
     <link href="/resources/css/bootstrap.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="/resources/css/bootstrap-theme.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="/resources/css/style.css" media="all" rel="stylesheet" type="text/css"/>
@@ -23,7 +24,7 @@
                     <span class="glyphicon glyphicon-user"></span>Employees</a>
                 </li>
 
-                <li><a href="">
+                <li><a href="/excursions">
                     <span class="glyphicon glyphicon-list-alt"></span>Excursions</a>
                 </li>
             </ul>
@@ -36,43 +37,28 @@
             <table class="table">
                 <thead>
                 <tr><th>
-                    Artpiece Name
+                    Firstname
                 </th>
                     <th>
-                        Author
+                        Lastname
                     </th>
                     <th>
-                        Hall
-                    </th>
-                    <th >
-                        Material
-                    </th>
-                    <th >
-                        Technique
+                        Position
                     </th>
                 </tr></thead>
                 <tbody>
-                <c:forEach items="${list}" var="artpiece" >
-                <tr>
-                    <td>
-                            ${artpiece.name}
-                    </td>
-                    <td>
-                            ${artpiece.author}
-                    </td>
-                    <td>
-                            ${artpiece.hall}
-                    </td>
-                    <td>
-                            ${artpiece.material}
-                    </td>
-                    <td>
-                            ${artpiece.technique}
-                    </td>
-                    <td>
-                        
-                    </td>
-                </tr>
+                <c:forEach items="${list}" var="employee" >
+                    <tr>
+                        <td>
+                                ${employee.firstname}
+                        </td>
+                        <td>
+                                ${employee.lastname}
+                        </td>
+                        <td>
+                                ${employee.position}
+                        </td>
+                    </tr>
                 </c:forEach>
                 </tbody>
             </table>
@@ -80,6 +66,6 @@
     </div>
 </div>
 
-    <script src="/resources/js/bootstrap.js" type="text/javascript"></script>
+<script src="/resources/js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>

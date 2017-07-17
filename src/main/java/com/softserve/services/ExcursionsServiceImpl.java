@@ -35,4 +35,5 @@ public class ExcursionsServiceImpl implements ExcursionsService {
     public void delete(Excursions entity) {
         excursionsDao.delete(entity);
     }
+
 }

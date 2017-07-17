@@ -17,7 +17,7 @@ public class ArtpiecesController {
     private ArtpiecesService artpiecesService;
 
     @RequestMapping(value = "/artpieces" ,method = RequestMethod.GET)
-    public  String checkBook(Model model) {
+    public  String artpiecesList(Model model) {
         model.addAttribute("list", artpiecesService.getAllArtpieces());
         return "artpieces";
     }
