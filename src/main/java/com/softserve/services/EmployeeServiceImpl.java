@@ -37,5 +37,9 @@ public class EmployeeServiceImpl implements EmployeesService {
         employeesDao.delete(entity);
     }
 
+    public List<Employees> everything() {
+        return employeesDao.everything();
+    }
+
 
 }

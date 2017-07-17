@@ -14,4 +14,6 @@ public interface EmployeesService {
     void update(Employees entity);
     Employees getEmployeeById(Long id);
     void delete(Employees entity);
+
+    List<Employees> everything();
 }

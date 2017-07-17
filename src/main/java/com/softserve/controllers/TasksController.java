@@ -40,13 +40,21 @@ public class TasksController {
     @RequestMapping(value = "/task3" ,method = RequestMethod.POST)
     public  String nameList(Model model,@RequestParam("name") String name) {
         model.addAttribute("listArt", artpiecesService.getEmployArt(name));
+        model.addAttribute("name",name);
         return "task3";
     }
 
     @RequestMapping(value = "/task4" ,method = RequestMethod.POST)
     public  String ListByHall(Model model,@RequestParam("hall") Long hall) {
         model.addAttribute("listArt", artpiecesService.getArtpieceByHall(hall));
+        model.addAttribute("hall",hall);
         return "task4";
+    }
+
+    @RequestMapping(value = "/task5" ,method = RequestMethod.GET)
+    public  String everything(Model model) {
+        model.addAttribute("listArt", employeesService.everything());
+        return "task5";
     }
 
 }
