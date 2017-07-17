@@ -14,7 +14,7 @@
         <div class="nav-collapse">
             <ul class="nav">
                 <li>
-                    <a href="">
+                    <a href="/">
                         <span class="glyphicon glyphicon-home"></span>Home</a>
                 </li>
                 <li><a href="/artpieces">
@@ -31,32 +31,19 @@
         </div>
     </div>
 </div>
-<div class="container-fluid main-content" style="width: 40%">
+<div class="container-fluid main-content" style="width: 30%">
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <%--Employees connected to the artpiece--%>
-
+            <h3 align="center">Artpieces of ${name}</h3>
                 <table class="table">
-                    <thead>
-                    <tr><th>
-                        Artpiece Name
-                    </th>
-                        <th>
-                            Employee Name
-                        </th>
-                    </tr></thead>
-                    <tbody>
                     <c:forEach items="${listArt}" var="art_emp" >
                         <tr>
-                            <td>
+                            <td align="center">
                                     ${art_emp.name}
-                            </td>
-                            <td>
-                                    ${art_emp.firstname}
                             </td>
                         </tr>
                     </c:forEach>
-                    </tbody>
                 </table>
         </div>
     </div>

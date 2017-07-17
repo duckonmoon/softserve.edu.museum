@@ -33,7 +33,6 @@ public class Employees {
 
     //getters and setters
 
-
     public Long getIdEmployee() {
         return idEmployee;
     }

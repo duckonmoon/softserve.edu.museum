@@ -57,15 +57,18 @@ public class TasksController {
      * Task 4
      */
     @RequestMapping(value = "/task4" ,method = RequestMethod.POST)
-    public  String ListByHall(Model model,@RequestParam("hall") Long hall) {
-        model.addAttribute("listArt", artpiecesService.getArtpieceByHall(hall));
+    public  String ListByHall(Model model,@RequestParam("hall") String hall) {
+        model.addAttribute("listArt", artpiecesService.getArtpieceByHall(Long.parseLong(hall)));
         model.addAttribute("hall",hall);
         return "task4";
     }
 
+    /**
+     * Task 5
+     */
     @RequestMapping(value = "/task5" ,method = RequestMethod.GET)
     public  String everything(Model model) {
-        model.addAttribute("listArt", employeesService.everything());
+        model.addAttribute("listExc", employeesService.everything());
         return "task5";
     }
 

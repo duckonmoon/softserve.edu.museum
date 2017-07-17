@@ -82,9 +82,9 @@
                     </div>
                     <div class="panel-body">
                         <span class="pull-left">Show artpieces in a hall</span>
-                        <form class="navbar-form navbar-right">
+                        <form class="navbar-form navbar-right" action="/task4" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Hall">
+                                <input name="hall" type="text" class="form-control" placeholder="Hall">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>
@@ -96,6 +96,8 @@
                     </div>
                     <div class="panel-body">
                         <span class="pull-left">Show all excursions</span>
+                        <form action="/task5" method="get">
+                        </form>
                         <button type="submit" class="btn btn-default pull-right">Execute</button>
                     </div>
                 </div>

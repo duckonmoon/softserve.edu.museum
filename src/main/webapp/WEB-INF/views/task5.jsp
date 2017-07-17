@@ -35,6 +35,40 @@
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <%--Show all excursions--%>
+                <table class="table">
+                    <thead>
+                    <tr><th>
+                        Firstname
+                    </th>
+                        <th>
+                            Lastname
+                        </th>
+                        <th>
+                            Start date
+                        </th>
+                        <th>
+                            End date
+                        </th>
+                    </tr></thead>
+                    <tbody>
+                    <c:forEach items="${listExc}" var="excursions" >
+                        <tr>
+                            <td>
+                                    ${excursions.firstname}
+                            </td>
+                            <td>
+                                    ${excursions.lastname}
+                            </td>
+                            <td>
+                                    ${excursions.}
+                            </td>
+                            <td>
+                                    ${excursions.end}
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
 
         </div>
     </div>
