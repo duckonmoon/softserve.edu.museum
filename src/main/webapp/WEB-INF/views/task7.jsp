@@ -14,7 +14,7 @@
         <div class="nav-collapse">
             <ul class="nav">
                 <li>
-                    <a href="">
+                    <a href="/">
                         <span class="glyphicon glyphicon-home"></span>Home</a>
                 </li>
                 <li><a href="/artpieces">
@@ -31,11 +31,35 @@
         </div>
     </div>
 </div>
-<div class="container-fluid main-content" style="width: 60%">
+<div class="container-fluid main-content" style="width: 30%">
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <%--Show available excursions--%>
 
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Start date
+                            </th>
+                            <th>
+                                End date
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${listExc}" var="excursions" >
+                        <tr>
+                            <td>
+                                    ${excursions.start}
+                            </td>
+                            <td>
+                                    ${excursions.end}
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
         </div>
     </div>
 </div>

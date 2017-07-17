@@ -126,12 +126,12 @@
                     <div class="panel-body">
                         <span class="pull-left">Show available excursions</span>
                         <br>
-                        <form class="test-form navbar-form navbar-right">
+                        <form class="test-form navbar-form navbar-right" action="/task7" method="post">
                             <div class="form-group">
                                 From
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input name="startdate" type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
                                 To
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input name="enddate" type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>

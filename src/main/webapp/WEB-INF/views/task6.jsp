@@ -36,6 +36,7 @@
         <div class="widget-content padded clearfix">
             <%--Show excursionists that are free--%>
 
+
         </div>
     </div>
 </div>

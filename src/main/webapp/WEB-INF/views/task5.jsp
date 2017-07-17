@@ -14,7 +14,7 @@
         <div class="nav-collapse">
             <ul class="nav">
                 <li>
-                    <a href="">
+                    <a href="/">
                         <span class="glyphicon glyphicon-home"></span>Home</a>
                 </li>
                 <li><a href="/artpieces">
@@ -45,7 +45,7 @@
                         </th>
                     </tr></thead>
                     <tbody>
-                    <c:forEach items="${listExc}" var="guides" >
+                    <c:forEach items="${listEmp}" var="guides" >
                         <tr>
                             <td>
                                     ${guides.firstname}

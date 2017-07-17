@@ -3,6 +3,7 @@ package com.softserve.controllers;
 import com.softserve.services.ArtpiecesService;
 import com.softserve.services.EmployeesService;
 import com.softserve.services.ExcursionsService;
+import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -74,7 +75,7 @@ public class TasksController {
      */
     @RequestMapping(value = "/task5" ,method = RequestMethod.GET)
     public  String everything(Model model) {
-        model.addAttribute("listExc", employeesService.everything());
+        model.addAttribute("listEmp", employeesService.everything());
         return "task5";
     }
 
@@ -82,9 +83,10 @@ public class TasksController {
      * Task 6
      * Show excursionists that are free
      */
+    //TODO would be good to add the name of the guide and not just the parameters from database
     @RequestMapping(value = "/task7" ,method = RequestMethod.POST)
-    public  String nothing(Model model, @PathVariable("startdate") String start,@PathVariable("enddate") String end) {
-        model.addAttribute("listArt", excursionsService.getExcursionsByStartEnd(start,end));
+    public  String nothing(Model model, @RequestParam("startdate") String start,@RequestParam("enddate") String end) {
+        model.addAttribute("listExc", excursionsService.getExcursionsByStartEnd(start,end));
         return "task7";
     }
 }
