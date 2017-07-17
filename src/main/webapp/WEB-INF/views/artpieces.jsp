@@ -35,22 +35,24 @@
         <div class="widget-content padded clearfix">
             <table class="table">
                 <thead>
-                <tr><th>
-                    Artpiece Name
-                </th>
-                    <th>
-                        Author
-                    </th>
-                    <th>
-                        Hall
-                    </th>
-                    <th >
-                        Material
-                    </th>
-                    <th >
-                        Technique
-                    </th>
-                </tr></thead>
+                    <tr>
+                        <th>
+                            Artpiece Name
+                        </th>
+                        <th>
+                            Author
+                        </th>
+                        <th>
+                            Hall
+                        </th>
+                        <th >
+                            Material
+                        </th>
+                        <th >
+                            Technique
+                        </th>
+                    </tr>
+                </thead>
                 <tbody>
                 <c:forEach items="${list}" var="artpiece" >
                 <tr>
@@ -68,9 +70,6 @@
                     </td>
                     <td>
                             ${artpiece.technique}
-                    </td>
-                    <td>
-
                     </td>
                 </tr>
                 </c:forEach>

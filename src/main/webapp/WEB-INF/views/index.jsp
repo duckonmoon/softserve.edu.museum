@@ -14,7 +14,7 @@
         <div class="nav-collapse">
             <ul class="nav">
                 <li>
-                    <a href="">
+                    <a href="/">
                         <span class="glyphicon glyphicon-home"></span>Home</a>
                 </li>
                 <li><a href="/artpieces">
@@ -95,10 +95,10 @@
                         <h3 class="panel-title">Task 5</h3>
                     </div>
                     <div class="panel-body">
-                        <span class="pull-left">Show all excursions</span>
+                        <span class="pull-left">Show all guides</span>
                         <form action="/task5" method="get">
+                            <button type="submit" class="btn btn-default pull-right" >Execute</button>
                         </form>
-                        <button type="submit" class="btn btn-default pull-right">Execute</button>
                     </div>
                 </div>
                 <div class="panel panel-default">

@@ -31,7 +31,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid main-content" style="width: 60%">
+<div class="container-fluid main-content" style="width: 30%">
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <%--Show all excursions--%>
@@ -43,27 +43,15 @@
                         <th>
                             Lastname
                         </th>
-                        <th>
-                            Start date
-                        </th>
-                        <th>
-                            End date
-                        </th>
                     </tr></thead>
                     <tbody>
-                    <c:forEach items="${listExc}" var="excursions" >
+                    <c:forEach items="${listExc}" var="guides" >
                         <tr>
                             <td>
-                                    ${excursions.firstname}
+                                    ${guides.firstname}
                             </td>
                             <td>
-                                    ${excursions.lastname}
-                            </td>
-                            <td>
-                                    ${excursions.}
-                            </td>
-                            <td>
-                                    ${excursions.end}
+                                    ${guides.lastname}
                             </td>
                         </tr>
                     </c:forEach>

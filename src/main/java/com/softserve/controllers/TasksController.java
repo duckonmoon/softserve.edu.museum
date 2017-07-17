@@ -28,6 +28,7 @@ public class TasksController {
 
     /**
      * Task 1
+     * Show info about the artpiece
      */
     @RequestMapping(value = "/task1" ,method = RequestMethod.POST)
     public  String employeeList(Model model, @RequestParam("artpiece") String artpiece) {
@@ -37,6 +38,7 @@ public class TasksController {
 
     /**
      * Task 2
+     * Show all artpieces of an author
      */
     @RequestMapping(value = "/task2" ,method = RequestMethod.POST)
     public  String authorList(Model model, @RequestParam("author") String author) {
@@ -46,6 +48,7 @@ public class TasksController {
 
     /**
      * Task 3
+     * Show artpieces by employee
      */
     @RequestMapping(value = "/task3" ,method = RequestMethod.POST)
     public  String nameList(Model model,@RequestParam("name") String name) {
@@ -56,6 +59,7 @@ public class TasksController {
 
     /**
      * Task 4
+     * Show artpieces in a hall
      */
     @RequestMapping(value = "/task4" ,method = RequestMethod.POST)
     public  String ListByHall(Model model,@RequestParam("hall") String hall) {
@@ -66,6 +70,7 @@ public class TasksController {
 
     /**
      * Task 5
+     * Show all guides
      */
     @RequestMapping(value = "/task5" ,method = RequestMethod.GET)
     public  String everything(Model model) {
@@ -73,14 +78,13 @@ public class TasksController {
         return "task5";
     }
 
-
+    /**
+     * Task 6
+     * Show excursionists that are free
+     */
     @RequestMapping(value = "/task7" ,method = RequestMethod.POST)
     public  String nothing(Model model, @PathVariable("startdate") String start,@PathVariable("enddate") String end) {
         model.addAttribute("listArt", excursionsService.getExcursionsByStartEnd(start,end));
         return "task7";
     }
-
-    
-
-
 }
