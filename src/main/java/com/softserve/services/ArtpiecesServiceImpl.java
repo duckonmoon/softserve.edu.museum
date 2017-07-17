@@ -2,6 +2,7 @@ package com.softserve.services;
 
 import com.softserve.dao.ArtpiecesDao;
 import com.softserve.entity.Artpieces;
+import dto.Task03DTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,6 +43,11 @@ public class ArtpiecesServiceImpl implements ArtpiecesService {
 
     public List<Artpieces> getArtpieceByAuthors(String author) {
         return artpiecesDao.getArtpieceByAuthors(author);
+    }
+
+    public List<Task03DTO> getEmployArt()
+    {
+        return artpiecesDao.getEmployArt();
     }
 
 

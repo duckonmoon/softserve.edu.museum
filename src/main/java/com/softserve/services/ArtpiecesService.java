@@ -1,6 +1,7 @@
 package com.softserve.services;
 
 import com.softserve.entity.Artpieces;
+import dto.Task03DTO;
 
 import java.util.List;
 
@@ -18,4 +19,6 @@ public interface ArtpiecesService {
 
     List<Artpieces> getArtpieceByAuthors(String author);
 
+
+    List<Task03DTO> getEmployArt();
 }
