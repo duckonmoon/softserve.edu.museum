@@ -19,4 +19,20 @@ public class ExcursionsServiceImpl implements ExcursionsService {
     public List<Excursions> getAllExcursions() {
         return excursionsDao.getAllEntities();
     }
+
+    public void add(Excursions entity) {
+        excursionsDao.add(entity);
+    }
+
+    public void update(Excursions entity) {
+        excursionsDao.update(entity);
+    }
+
+    public Excursions getExcursionById(Long id) {
+        return excursionsDao.getEntityById(id);
+    }
+
+    public void delete(Excursions entity) {
+        excursionsDao.delete(entity);
+    }
 }

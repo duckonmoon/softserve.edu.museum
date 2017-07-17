@@ -8,5 +8,10 @@ import java.util.List;
  *
  */
 public interface EmployeesService {
-    public List<Employees> getAllEmployees();
+    List<Employees> getAllEmployees();
+
+    void add(Employees entity);
+    void update(Employees entity);
+    Employees getEmployeeById(Long id);
+    void delete(Employees entity);
 }

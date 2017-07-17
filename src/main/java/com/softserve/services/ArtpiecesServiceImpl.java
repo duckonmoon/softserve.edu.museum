@@ -16,9 +16,25 @@ public class ArtpiecesServiceImpl implements ArtpiecesService {
     @Autowired
     private ArtpiecesDao artpiecesDao;
 
+    public void add(Artpieces entity) {
+        artpiecesDao.add(entity);
+    }
+
+    public void update(Artpieces entity) {
+        artpiecesDao.update(entity);
+    }
+
+    public Artpieces getArtpieceById(Long id) {
+        return artpiecesDao.getEntityById(id);
+    }
+
     public List<Artpieces> getAllArtpieces() {
         return artpiecesDao.getAllEntities();
     }
 
-    
+    public void delete(Artpieces entity) {
+        artpiecesDao.delete(entity);
+    }
+
+
 }

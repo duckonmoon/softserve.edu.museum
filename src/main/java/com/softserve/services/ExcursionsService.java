@@ -8,5 +8,10 @@ import java.util.List;
  *
  */
 public interface ExcursionsService {
-    public List<Excursions> getAllExcursions();
+    List<Excursions> getAllExcursions();
+
+    void add(Excursions entity);
+    void update(Excursions entity);
+    Excursions getExcursionById(Long id);
+    void delete(Excursions entity);
 }
