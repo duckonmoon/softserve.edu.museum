@@ -2,6 +2,7 @@ package com.softserve.services;
 
 import com.softserve.dao.ExcursionsDao;
 import com.softserve.entity.Excursions;
+import dto.ExcursionsDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +35,9 @@ public class ExcursionsServiceImpl implements ExcursionsService {
 
     public void delete(Excursions entity) {
         excursionsDao.delete(entity);
+    }
+
+    public List<ExcursionsDTO> getAllExcursionsWithGuides() {
+        return excursionsDao.getAllExcursionsWithGuides();
     }
 }
