@@ -30,4 +30,11 @@ public class TasksController {
         model.addAttribute("artpieceObject", artpiecesService.getArtpieceByName(artpiece));
         return "task1";
     }
+
+    @RequestMapping(value = "/task2" ,method = RequestMethod.POST)
+    public  String authorList(Model model, @RequestParam("author") String author) {
+        model.addAttribute("listArt", artpiecesService.getArtpieceByName(author));
+        return "task2";
+    }
+
 }
