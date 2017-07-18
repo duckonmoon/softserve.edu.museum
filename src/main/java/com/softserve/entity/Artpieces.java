@@ -17,9 +17,9 @@ import java.util.Set;
         @NamedQuery(name = "Task2", query = "from Artpieces where author = ?1"),
         @NamedQuery(name = "Task3", query = "select a.name,e.firstname from Artpieces a join a.employees e where  e.firstname = ?1"),
         @NamedQuery(name = "Task4", query = "from Artpieces a where hall = ?1"),
-        @NamedQuery(name = "Task8.1", query = "select a.material, count(*) as quantity, count(a.material) * 100 / ?1" +
+        @NamedQuery(name = "Task8.1", query = "select a.material, count(*) as quantity, ((count(a.material) * 100) / (?1)) as percentage" +
                 " from Artpieces a group by a.material having a.material = ?2"),
-        @NamedQuery(name = "Task8.11" , query = "select count(*) from Artpieces")
+        @NamedQuery(name = "Task8.11" , query = "select count(a) from Artpieces a")
         })
 public class Artpieces {
 

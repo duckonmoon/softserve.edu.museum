@@ -1,5 +1,6 @@
 package com.softserve.controllers;
 
+import com.softserve.entity.Artpieces;
 import com.softserve.services.ArtpiecesService;
 import com.softserve.services.EmployeesService;
 import com.softserve.services.ExcursionsService;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Random;
 
 /**
  *
@@ -33,7 +36,21 @@ public class TasksController {
      */
     @RequestMapping(value = "/task1" ,method = RequestMethod.POST)
     public  String employeeList(Model model, @RequestParam("artpiece") String artpiece) {
-        model.addAttribute("artpieceObject", artpiecesService.getArtpieceByName(artpiece));
+        try {
+            model.addAttribute("artpieceObject", artpiecesService.getArtpieceByName(artpiece));
+        }
+        catch (Exception e)
+        {
+            Artpieces artpieces = new Artpieces();
+            Random r = new Random();
+            artpieces.setAuthor("Not Found");
+            artpieces.setIdArtpiece(200 + new Long(r.nextInt(10000)));
+            artpieces.setMaterial("Not Found");
+            artpieces.setHall(new Long(404));
+            artpieces.setName(artpiece);
+            artpieces.setTechnique("Not Found");
+            model.addAttribute("artpieceObject", artpieces);
+        }
         return "task1";
     }
 
@@ -63,9 +80,16 @@ public class TasksController {
      * Show artpieces in a hall
      */
     @RequestMapping(value = "/task4" ,method = RequestMethod.POST)
-    public  String ListByHall(Model model,@RequestParam("hall") String hall) {
-        model.addAttribute("listArt", artpiecesService.getArtpieceByHall(Long.parseLong(hall)));
-        model.addAttribute("hall",hall);
+    public  String ListByHall(Model model, @RequestParam("hall") String hall) {
+        try {
+            model.addAttribute("listArt", artpiecesService.getArtpieceByHall(Long.parseLong(hall)));
+            model.addAttribute("hall", hall);
+        }
+        catch (Exception e)
+        {
+            model.addAttribute("listArt", null);
+            model.addAttribute("hall", "that doesn't exist");
+        }
         return "task4";
     }
 
@@ -80,7 +104,7 @@ public class TasksController {
     }
 
     /**
-     * Task 6
+     * Task 7
      * Show excursionists that are free
      */
     //TODO would be good to add the name of the guide and not just the parameters from database
@@ -88,5 +112,15 @@ public class TasksController {
     public  String nothing(Model model, @RequestParam("startdate") String start,@RequestParam("enddate") String end) {
         model.addAttribute("listExc", excursionsService.getExcursionsByStartEnd(start,end));
         return "task7";
+    }
+
+    /**
+     * Task 8
+     * Show material statistic
+     */
+    @RequestMapping(value = "/task8" ,method = RequestMethod.POST)
+    public String materialStatistic(Model model, @RequestParam("material") String material) {
+        model.addAttribute("statistic", artpiecesService.getMaterialStatistic(material));
+        return "task8";
     }
 }

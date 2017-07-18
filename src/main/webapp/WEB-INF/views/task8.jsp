@@ -14,7 +14,7 @@
         <div class="nav-collapse">
             <ul class="nav">
                 <li>
-                    <a href="">
+                    <a href="/">
                         <span class="glyphicon glyphicon-home"></span>Home</a>
                 </li>
                 <li><a href="/artpieces">
@@ -35,7 +35,36 @@
     <div class="widget-container fluid-height clearfix">
         <div class="widget-content padded clearfix">
             <%--Show the statistic of the given material--%>
-
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>
+                            Material
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Percentage
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                <c:forEach items="${statistic}" var="materialStatistic" >
+                    <tr>
+                        <td>
+                                ${materialStatistic.material}
+                        </td>
+                        <td>
+                                ${materialStatistic.quantity}
+                        </td>
+                        <td>
+                                ${materialStatistic.percentage}%
+                        </td>
+                    </tr>
+                </c:forEach>
+                    </tbody>
+                </table>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by shmidt on 16.07.17.
+ *
  */
 @Entity
 @NamedQueries(

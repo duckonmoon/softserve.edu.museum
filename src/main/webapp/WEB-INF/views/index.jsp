@@ -10,26 +10,26 @@
 </head>
 <body class="page-header-fixed bg-1">
 <div class="navbar navbar-fixed-top scroll-hide" style="overflow: visible;">
-    <div class="container-fluid main-nav clearfix">
-        <div class="nav-collapse">
-            <ul class="nav">
-                <li>
-                    <a href="/">
-                        <span class="glyphicon glyphicon-home"></span>Home</a>
-                </li>
-                <li><a href="/artpieces">
-                    <span class="glyphicon glyphicon-king"></span>Artpieces</a>
-                </li>
-                <li><a href="/employees">
-                    <span class="glyphicon glyphicon-user"></span>Employees</a>
-                </li>
+            <div class="container-fluid main-nav clearfix">
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li>
+                            <a href="/">
+                                <span class="glyphicon glyphicon-home"></span>Home</a>
+                        </li>
+                        <li><a href="/artpieces">
+                            <span class="glyphicon glyphicon-king"></span>Artpieces</a>
+                        </li>
+                        <li><a href="/employees">
+                            <span class="glyphicon glyphicon-user"></span>Employees</a>
+                        </li>
 
-                <li><a href="/excursions">
-                    <span class="glyphicon glyphicon-list-alt"></span>Excursions</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+                        <li><a href="/excursions">
+                            <span class="glyphicon glyphicon-list-alt"></span>Excursions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 </div>
 <div class="container-fluid main-content" style="width: 60%">
     <div class="widget-container fluid-height clearfix">
@@ -111,9 +111,9 @@
                         <form class="test-form navbar-form navbar-right">
                             <div class="form-group">
                                 From
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input type="text" class="form-control" placeholder="DD-MM-YYYY hh:mm:ss">
                                 To
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input type="text" class="form-control" placeholder="DD-MM-YYYY hh:mm:ss">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>
@@ -129,9 +129,9 @@
                         <form class="test-form navbar-form navbar-right" action="/task7" method="post">
                             <div class="form-group">
                                 From
-                                <input name="startdate" type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input name="startdate" type="text" class="form-control" placeholder="DD-MM-YYYY hh:mm:ss">
                                 To
-                                <input name="enddate" type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input name="enddate" type="text" class="form-control" placeholder="DD-MM-YYYY hh:mm:ss">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>
@@ -143,9 +143,9 @@
                     </div>
                     <div class="panel-body">
                         <span class="pull-left">Show the statistic of the given material</span>
-                        <form class="navbar-form navbar-right">
+                        <form class="navbar-form navbar-right" action="/task8" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Material">
+                                <input name="material" type="text" class="form-control" placeholder="Material">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>
@@ -175,9 +175,9 @@
                         <form class="navbar-form navbar-right">
                             <div class="form-group">
                                 From
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input type="text" class="form-control" placeholder="DD-MM-YYYY hh:mm:ss">
                                 To
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD hh:mm:ss">
+                                <input type="text" class="form-control" placeholder="DD-MM-YYYY hh:mm:ss">
                             </div>
                             <button type="submit" class="btn btn-default">Execute</button>
                         </form>

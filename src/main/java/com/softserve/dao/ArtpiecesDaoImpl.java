@@ -3,6 +3,7 @@ package com.softserve.dao;
 import com.softserve.entity.Artpieces;
 import dto.ExcursionsDTO;
 import dto.Task03DTO;
+import dto.Task08DTO;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Query;
@@ -11,6 +12,7 @@ import javax.persistence.TypedQuery;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  *
@@ -19,7 +21,7 @@ import java.util.List;
 public class ArtpiecesDaoImpl extends BaseDaoImpl<Artpieces, Long> implements ArtpiecesDao {
 
     public Artpieces getArtpieceByName(String artpiece) {
-        TypedQuery<Artpieces> query = entityManager.createNamedQuery("Task1",Artpieces.class);
+        TypedQuery<Artpieces> query = entityManager.createNamedQuery("Task1", Artpieces.class);
         query.setParameter(1,artpiece);
         return query.getSingleResult();
     }
@@ -50,6 +52,29 @@ public class ArtpiecesDaoImpl extends BaseDaoImpl<Artpieces, Long> implements Ar
         Query query = entityManager.createNamedQuery("Task4");
         query.setParameter(1,id);
         return query.getResultList();
+    }
+
+    public List<Task08DTO> getMaterialStatistic(String material) {
+        Query query = entityManager.createNamedQuery("Task8.1");
+        Query query1 = entityManager.createQuery("select a.id from Artpieces a");
+        //Query query1 = entityManager.createNamedQuery("Task8.11");
+        query.setParameter(2, material);
+        //why it doesnt work when we use just count
+        Long llong = new Long(query1.getResultList().size());
+        query.setParameter(1, new Long(llong));
+        List<Object[]> list1 = query.getResultList();
+        Iterator<Object[]> listIterator = list1.iterator();
+        List<Task08DTO> list = new LinkedList<Task08DTO>();
+        while (listIterator.hasNext())
+        {
+            Task08DTO ed = new Task08DTO();
+            Object[] fuck = listIterator.next();
+            ed.setMaterial(fuck[0].toString());
+            ed.setQuantity(Long.parseLong(fuck[1].toString()));
+            ed.setPercentage(Double.parseDouble(fuck[2].toString()));
+            list.add(ed);
+        }
+        return list;
     }
 
 
