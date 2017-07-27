@@ -1,24 +1,22 @@
-package com.softserve.dao;
+package com.softserve.dao.imp;
 
+import com.softserve.dao.ArtpiecesDao;
 import com.softserve.entity.Artpieces;
-import dto.ExcursionsDTO;
 import dto.Task03DTO;
 import dto.Task08DTO;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Query;
-import javax.persistence.NamedQuery;
 import javax.persistence.TypedQuery;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 
 /**
  *
  */
 @Repository
-public class ArtpiecesDaoImpl extends BaseDaoImpl<Artpieces, Long> implements ArtpiecesDao {
+public class ArtpiecesDaoImpl extends BaseDaoImpl<Artpieces> implements ArtpiecesDao {
 
     public Artpieces getArtpieceByName(String artpiece) {
         TypedQuery<Artpieces> query = entityManager.createNamedQuery("Task1", Artpieces.class);

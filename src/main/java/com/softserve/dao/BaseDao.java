@@ -5,11 +5,11 @@ import java.util.List;
 /**
  *
  */
-public interface BaseDao<E, T> {
+public interface BaseDao<T> {
 
-    void add(E entity);
-    void update(E entity);
-    E getEntityById(T id);
-    List<E> getAllEntities();
-    void delete(E entity);
+    void addEntity(T entity);
+    void updateEntity(T entity);
+    T getEntityById(Long id);
+    List<T> getAllEntities();
+    void delete(T entity);
 }

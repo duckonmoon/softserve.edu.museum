@@ -1,7 +1,8 @@
-package com.softserve.services;
+package com.softserve.services.imp;
 
 import com.softserve.dao.ExcursionsDao;
 import com.softserve.entity.Excursions;
+import com.softserve.services.ExcursionsService;
 import dto.ExcursionsDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,11 +23,11 @@ public class ExcursionsServiceImpl implements ExcursionsService {
     }
 
     public void add(Excursions entity) {
-        excursionsDao.add(entity);
+        excursionsDao.addEntity(entity);
     }
 
     public void update(Excursions entity) {
-        excursionsDao.update(entity);
+        excursionsDao.updateEntity(entity);
     }
 
     public Excursions getExcursionById(Long id) {

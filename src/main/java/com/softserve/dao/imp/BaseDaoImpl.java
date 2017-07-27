@@ -1,5 +1,6 @@
-package com.softserve.dao;
+package com.softserve.dao.imp;
 
+import com.softserve.dao.BaseDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,38 +12,38 @@ import java.util.List;
 /**
  *
  */
-public class BaseDaoImpl<E, T> implements BaseDao<E, T> {
+public class BaseDaoImpl<T> implements BaseDao<T> {
 
-    private Class<E> entityClass;
+    private Class<T> entityClass;
 
     @PersistenceContext
     protected EntityManager entityManager;
 
     @Autowired
     public BaseDaoImpl(){
-        entityClass = (Class<E>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+        entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
     }
 
     @Transactional
-    public void add(E entity) {
+    public void addEntity(T entity) {
         entityManager.persist(entity);
     }
 
     @Transactional
-    public void update(E entity) {
+    public void updateEntity(T entity) {
         entityManager.merge(entity);
     }
 
-    public E getEntityById(T id) {
-        return (E)  entityManager.find(entityClass, id);
+    public T getEntityById(Long id) {
+        return entityManager.find(entityClass, id);
     }
 
-    public List<E> getAllEntities() {
+    public List<T> getAllEntities() {
         return entityManager.createQuery("from " + entityClass.getName()).getResultList();
     }
 
     @Transactional
-    public void delete(E entity) {
+    public void delete(T entity) {
         entityManager.remove(entity);
     }
 }

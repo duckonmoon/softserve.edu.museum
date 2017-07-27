@@ -1,8 +1,9 @@
-package com.softserve.services;
+package com.softserve.services.imp;
 
 import com.softserve.dao.BaseDao;
 import com.softserve.dao.EmployeesDao;
 import com.softserve.entity.Employees;
+import com.softserve.services.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,11 +23,11 @@ public class EmployeeServiceImpl implements EmployeesService {
     }
 
     public void add(Employees entity) {
-        employeesDao.add(entity);
+        employeesDao.addEntity(entity);
     }
 
     public void update(Employees entity) {
-        employeesDao.update(entity);
+        employeesDao.updateEntity(entity);
     }
 
     public Employees getEmployeeById(Long id) {

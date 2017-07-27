@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by shmidt on 16.07.17.
  */
-public interface ArtpiecesDao extends BaseDao<Artpieces, Long> {
+public interface ArtpiecesDao extends BaseDao<Artpieces> {
     Artpieces getArtpieceByName(String artpiece);
     List<Artpieces> getArtpieceByAuthors(String author);
     List<Task03DTO> getEmployArt(String name);

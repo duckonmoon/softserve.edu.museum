@@ -27,9 +27,46 @@
                         <li><a href="/excursions">
                             <span class="glyphicon glyphicon-list-alt"></span>Excursions</a>
                         </li>
+                        <li class="pull-right" style="padding: 15px">
+                            <button class="btn btn-default" id="loginBtn" data-toggle="modal" data-target="#loginModal">Login</button>
+                        </li>
                     </ul>
                 </div>
             </div>
+</div>
+
+<!--LOGIN MODAL________________________________________________________________________________________________________________________________________-->
+<div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="email">Address Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <button type="sign-in" class="btn btn-info">Sign in</button>
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container-fluid main-content" style="width: 60%">
     <div class="widget-container fluid-height clearfix">
@@ -196,6 +233,7 @@
         </div>
     </div>
 </div>
+<script src="/resources/js/jquery.1.10.2.min.js" type="text/javascript"></script>
 <script src="/resources/js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>

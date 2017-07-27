@@ -1,7 +1,8 @@
-package com.softserve.services;
+package com.softserve.services.imp;
 
 import com.softserve.dao.ArtpiecesDao;
 import com.softserve.entity.Artpieces;
+import com.softserve.services.ArtpiecesService;
 import dto.Task03DTO;
 import dto.Task08DTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +21,12 @@ public class ArtpiecesServiceImpl implements ArtpiecesService {
 
     public void add(Artpieces entity) {
 
-        artpiecesDao.add(entity);
+        artpiecesDao.addEntity(entity);
     }
 
     public void update(Artpieces entity) {
 
-        artpiecesDao.update(entity);
+        artpiecesDao.updateEntity(entity);
     }
 
     public Artpieces getArtpieceById(Long id) {

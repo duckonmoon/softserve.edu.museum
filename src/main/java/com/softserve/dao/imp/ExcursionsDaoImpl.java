@@ -1,5 +1,7 @@
-package com.softserve.dao;
+package com.softserve.dao.imp;
 
+import com.softserve.dao.ExcursionsDao;
+import com.softserve.dao.imp.BaseDaoImpl;
 import com.softserve.entity.Excursions;
 import dto.ExcursionsDTO;
 import org.springframework.stereotype.Repository;
@@ -12,7 +14,7 @@ import java.util.List;
  *
  */
 @Repository
-public class ExcursionsDaoImpl extends BaseDaoImpl<Excursions, Long> implements ExcursionsDao {
+public class ExcursionsDaoImpl extends BaseDaoImpl<Excursions> implements ExcursionsDao {
 
     public List<ExcursionsDTO> getAllExcursionsWithGuides() {
         List<Object[]> resultList = entityManager.createQuery("select e.start,e.end,g.firstname,g.lastname from Excursions e join e.guide g").getResultList();
