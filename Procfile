@@ -1,1 +1,1 @@
-web: java -jar target/com.softserve.edu.museum-1.0-SNAPSHOT.war
+web: java -jar target/com.softserve.edu.museum-1.0-SNAPSHOT.jar
