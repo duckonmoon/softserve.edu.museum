@@ -7,7 +7,7 @@
     <persistence-unit name="my-pu">
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="bbe64763b0f500"/>
             <property name="hibernate.connection.password" value="a3da428e"/>
@@ -15,5 +15,4 @@
         </properties>
     </persistence-unit>
 </persistence>
-
 
