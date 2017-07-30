@@ -1,1 +1,1 @@
-web: java -jar  target/com.softserve.edu.museum-1.0-SNAPSHOT.jar --port $PORT target/*.war
+web: java -jar  target/dependency/webapp-runner.jar --port $PORT target/*.war
